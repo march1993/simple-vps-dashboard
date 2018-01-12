@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import os
+
+print("Content-type: text/plain")
+print("")
+
+
+ports = os.popen("netstat -ltun | awk '{print $4}' |  grep 0.0.0.0 | cut -f 2 -d ':'").read().splitlines()
+
+conns = os.popen("netstat -tun").read().splitlines()
+
+records = []
+
+for conn in conns:
+    try:
+        arr = conn.split()
+        local_port = arr[3].split(':')[1]
+        record = local_port + '\t<-\t' + arr[4].split(':')[0]
+
+        if local_port in ports and record not in records:
+            print(record)
+            records.append(record)
+
+    except:
+        pass
+

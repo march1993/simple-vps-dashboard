@@ -1,0 +1,31 @@
+pre {
+        margin: 0;
+        padding: 4px;
+}
+table {
+        border-collapse: collapse;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+}
+
+tr > td,
+tr > th {
+        border: 1px solid #ccc;
+}
+
+tbody > tr:nth-child(odd) > td {
+        background-color: LightYellow;
+}
+tbody > tr:nth-child(even) > td {
+        background-color: LemonChiffon;
+}
+
+thead > tr > th {
+        background-color: Moccasin;
+}
+
+tr > td:first-child {
+        font-weight: bold;
+        vertical-align: top;
+}
