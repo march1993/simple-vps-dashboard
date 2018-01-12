@@ -5,6 +5,7 @@ pre {
 pre.result {
 	word-break: break-all;
 	white-space: pre-wrap;
+	width: 80ch;
 }
 table {
 	border-collapse: collapse;
