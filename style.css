@@ -2,11 +2,13 @@ pre {
 	margin: 0;
 	padding: 4px;
 }
+
 pre.result {
 	word-break: break-all;
 	white-space: pre-wrap;
-	width: 80ch;
+	width: 120ch;
 }
+
 table {
 	border-collapse: collapse;
 	left: 0;
@@ -22,6 +24,7 @@ tr > th {
 tbody > tr:nth-child(odd) > td {
 	background-color: LightYellow;
 }
+
 tbody > tr:nth-child(even) > td {
 	background-color: LemonChiffon;
 }
