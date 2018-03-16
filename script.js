@@ -56,7 +56,7 @@ window.addEventListener('load', e => {
 		}).catch(e => {
 			delays.splice(0);
 			d_ping.textContent = 'Network Error';
-			measure_one();
+			setTimeout(() => measure_one(), 1000);
 		});
 	};
 	measure_one();
