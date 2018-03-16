@@ -51,7 +51,7 @@ window.addEventListener('load', e => {
 
 			const sum = delays.reduce((a, b) => a + b, 0);
 			const avg = sum / delays.length;
-			d_ping.textContent = avg + 'ms';
+			d_ping.textContent = parseInt(avg) + 'ms';
 			setTimeout(() => measure_one(), 1000);
 		}).catch(e => {
 			delays.splice(0);
