@@ -41,7 +41,7 @@ window.addEventListener('load', e => {
 	/* Ping */
 	const d_ping = document.getElementById('ping');
 	const delays = [];
-	const average_window = 5;
+	const average_window = 10;
 	const measure_one = () => {
 		const tick = +new Date;
 		fetch('/cgi-bin/false').then(() => {
@@ -52,7 +52,7 @@ window.addEventListener('load', e => {
 			const sum = delays.reduce((a, b) => a + b, 0);
 			const avg = sum / delays.length;
 			d_ping.textContent = avg + 'ms';
-			measure_one();
+			setTimeout(() => measure_one(), 1000);
 		}).catch(e => {
 			delays.splice(0);
 			d_ping.textContent = 'Network Error';
