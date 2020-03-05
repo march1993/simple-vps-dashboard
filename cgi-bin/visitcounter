@@ -8,5 +8,6 @@ mkdir -p ../visitcounts
 file=../visitcounts/$ip
 touch $file
 date -Isecond >> $file
-wc -l $file | cut -d ' ' -f1
+cd ../visitcounts
+wc -l *
 
