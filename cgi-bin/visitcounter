@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Content-type: text/plain"
+echo ''
+
+ip=$REMOTE_ADDR
+
+mkdir -p ../visitcounts
+file=../visitcounts/$ip
+touch $file
+date -Isecond >> $file
+wc -l $file | cut -d ' ' -f1
+
